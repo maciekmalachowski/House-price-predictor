@@ -2,6 +2,25 @@
 
 {% block title %}Home{% endblock %}
 
-{% block content  %}
+{% load crispy_forms_tags %}
 
+{% block content  %}
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-8 offset-md-2">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <form method="POST">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            </br>
+                            <div class="d-grid gap-2">
+                                <input class="btn btn-outline-success btn-lg" type="submit" value="Make Prediction">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

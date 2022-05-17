@@ -176,7 +176,3 @@ class Data(models.Model):
             self.TotRmsAbvGrd, self.GarageType, self.GarageArea, self.PavedDrive,
             self.OpenPorchSF, self.PoolArea]])
         return super().save(*args, *kwargs)
-
-
-    def __str__(self):
-        return str(self.BldgType)
