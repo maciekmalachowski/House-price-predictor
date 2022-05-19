@@ -7,15 +7,27 @@
 <table class="table table-striped">
     <thead>
         <tr>
-            <th scope="col">BldgType</th>
-            <th scope="col">SalePrice</th>
+            <th scope="col" class="fs-4">Type of dwelling</th>
+            <th scope="col" class="fs-4">Predicted price</th>
         </tr>
     </thead>
     <tbody>
         {% for data in predictions %}
         <tr>
-            <th scope="row">{{ data.BldgType }}</th>
-            <td>{{ data.SalePrice }}</td>
+            <td scope="row" class="fst-italic fs-5">
+                {% if data.BldgType == 0 %}
+                    Single-family Detached
+                {% elif data.BldgType == 1 %}
+                    Two-family Conversion; originally built as one-family dwelling
+                {% elif data.BldgType == 2 %}
+                    Duplex
+                {% elif data.BldgType == 3 %}
+                    Townhouse Inside Unit
+                {% elif data.BldgType == 4 %}
+                    Townhouse End Unit
+                {% endif %}
+            </td>
+            <td class="fw-italic fs-5">{{ data.SalePrice }}$</td>
         </tr>
         {% endfor %}
     </tbody>

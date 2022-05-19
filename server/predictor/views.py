@@ -17,8 +17,7 @@ def IndexView(request):
     return render(request, 'index.html', context)
 
 def PredictionsView(request):
-    predicted_SalePrice = Data.objects.all()
     context = {
-        'predictions' : predicted_SalePrice
+        'predictions' : Data.objects.all()
     }
     return render(request, 'predictions.html', context)

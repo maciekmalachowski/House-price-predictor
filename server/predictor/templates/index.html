@@ -7,13 +7,15 @@
 {% block content  %}
     <div class="container">
         <div class="row mt-4">
-            <div class="col-md-8 offset-md-2">
-                <div class="card shadow">
+            <div class="col-xl-8 offset-md-2">
+                <h1 class="text-center">Make your dream house in Ames 🏠</h1>
+                <div class="shadow-lg p-3 mb-5 bg-body rounded">
                     <div class="card-body">
                         <form method="POST">
                             {% csrf_token %}
                             {{ form|crispy }}
                             </br>
+                            <p class="text-muted">All fields are required</p>
                             <div class="d-grid gap-2">
                                 <input class="btn btn-outline-success btn-lg" type="submit" value="Make Prediction">
                             </div>
