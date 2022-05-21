@@ -2,11 +2,11 @@
 
 {% block title %}Predictions{% endblock %}
 
-{% block content  %}
+{% block content %}
 
-<table class="table table-striped">
+<table class="table table-dark table-hover">
     <thead>
-        <tr>
+        <tr class="table-active">
             <th scope="col" class="fs-4">Type of dwelling</th>
             <th scope="col" class="fs-4">Predicted price</th>
         </tr>
@@ -15,17 +15,19 @@
         {% for data in predictions %}
         <tr>
             <td scope="row" class="fst-italic fs-5">
-                {% if data.BldgType == 0 %}
-                    Single-family Detached
-                {% elif data.BldgType == 1 %}
-                    Two-family Conversion; originally built as one-family dwelling
-                {% elif data.BldgType == 2 %}
-                    Duplex
-                {% elif data.BldgType == 3 %}
-                    Townhouse Inside Unit
-                {% elif data.BldgType == 4 %}
-                    Townhouse End Unit
-                {% endif %}
+                <a class="text-decoration-none" href="{% url 'details' data.pk %}" >
+                    {% if data.BldgType == 0 %}
+                        Single-family Detached
+                    {% elif data.BldgType == 1 %}
+                        Two-family Conversion; originally built as one-family dwelling
+                    {% elif data.BldgType == 2 %}
+                        Duplex
+                    {% elif data.BldgType == 3 %}
+                        Townhouse Inside Unit
+                    {% elif data.BldgType == 4 %}
+                        Townhouse End Unit
+                    {% endif %}
+                </a>
             </td>
             <td class="fw-italic fs-5">{{ data.SalePrice }}$</td>
         </tr>

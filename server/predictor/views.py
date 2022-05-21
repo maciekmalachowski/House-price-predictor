@@ -21,3 +21,9 @@ def PredictionsView(request):
         'predictions' : Data.objects.all()
     }
     return render(request, 'predictions.html', context)
+
+def DetailsView(request, pk):
+    context = {
+        'details' : Data.objects.all()
+    }
+    return render(request, 'details.html', context)

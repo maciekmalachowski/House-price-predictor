@@ -1,0 +1,22 @@
+{% extends 'partials/base.html' %}
+
+{% block title %}Details{% endblock %}
+
+{% block content  %}
+
+    <table class="table table-dark table-hover">
+        <thead>
+        <tr class="table-active">
+            <th scope="col">Predicted Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            {% for data in details.pk %}
+                <td>{{ data.SalePrice }}</td>
+            {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
