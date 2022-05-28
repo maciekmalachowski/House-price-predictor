@@ -1,29 +1,21 @@
 from multiprocessing import context
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 from .forms import DataForm
 from .models import Data
+from django.views.generic import CreateView, ListView, DetailView
 
-def IndexView(request):
-    if request.method == 'POST':
-        form = DataForm(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('predictions')
-    else:
-        form = DataForm()
-    context = {
-        'form' : form
-    }
-    return render(request, 'index.html', context)
+class IndexView(CreateView):
+    template_name = 'index.html'
+    form_class = DataForm
+    queryset = Data.objects.all()
 
-def PredictionsView(request):
-    context = {
-        'predictions' : Data.objects.all()
-    }
-    return render(request, 'predictions.html', context)
+    def form_valid(self, form):
+        return super().form_valid(form)
 
-def DetailsView(request, pk):
-    context = {
-        'details' : Data.objects.all()
-    }
-    return render(request, 'details.html', context)
+class PredictionsView(ListView):
+    template_name = 'predictions.html'
+    queryset = Data.objects.all()
+
+class DetailsView(DetailView):
+    template_name = 'details.html'
+    queryset = Data.objects.all()

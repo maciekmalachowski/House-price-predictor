@@ -12,9 +12,9 @@ class DataForm(forms.ModelForm):
                 'PavedDrive', 'OpenPorchSF', 'PoolArea', 'HeatingQC',
                 'CentralAir', 'Electrical']
         labels = {
-            'LotArea' : '<h5> Lot size in square feet</h5>', 
-            'LotShape' : '</br><h5> General shape of property</h5>', 
-            'BldgType' : '</br><h5> Type of dwelling</h5>', 
+            'LotArea' : '<h5> Lot size in square feet </h5>', 
+            'LotShape' : '</br><h5> General shape of property </h5>', 
+            'BldgType' : '</br><h5> Type of dwelling </h5>', 
             'HouseStyle' : '</br><h5> Style of dwelling</h5>',
             'Neighborhood' : '</br><h5> Physical locations within Ames city limits </h5>', 
             'Street' : '</br><h5> Type of road access </h5>', 

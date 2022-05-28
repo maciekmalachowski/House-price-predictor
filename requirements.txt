@@ -1,4 +1,4 @@
-Python==3.10.0
-Django==4.0.4
+Django > 4
 django-crispy-forms==1.14.0
+sklearn==0.0
 joblib==1.1.0

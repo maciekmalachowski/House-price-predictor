@@ -1,3 +1,4 @@
+from django.urls import reverse
 from django.db import models
 from django.core.validators import MinValueValidator
 from sklearn.ensemble import RandomForestRegressor
@@ -175,3 +176,6 @@ class Data(models.Model):
             self.TotRmsAbvGrd, self.GarageType, self.GarageArea, self.PavedDrive,
             self.OpenPorchSF, self.PoolArea]])
         return super().save(*args, *kwargs)
+    
+    def get_absolute_url(self):
+        return reverse('predictions')

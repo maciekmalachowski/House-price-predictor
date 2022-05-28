@@ -3,35 +3,36 @@
 {% block title %}Predictions{% endblock %}
 
 {% block content %}
-
-<table class="table table-dark table-hover">
-    <thead>
-        <tr class="table-active">
-            <th scope="col" class="fs-4">Type of dwelling</th>
-            <th scope="col" class="fs-4">Predicted price</th>
-        </tr>
-    </thead>
-    <tbody>
-        {% for data in predictions %}
-        <tr>
-            <td scope="row" class="fst-italic fs-5">
-                <a class="text-decoration-none" href="{% url 'details' data.pk %}" >
-                    {% if data.BldgType == 0 %}
-                        Single-family Detached
-                    {% elif data.BldgType == 1 %}
-                        Two-family Conversion; originally built as one-family dwelling
-                    {% elif data.BldgType == 2 %}
-                        Duplex
-                    {% elif data.BldgType == 3 %}
-                        Townhouse Inside Unit
-                    {% elif data.BldgType == 4 %}
-                        Townhouse End Unit
-                    {% endif %}
-                </a>
-            </td>
-            <td class="fw-italic fs-5">{{ data.SalePrice }}$</td>
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+<div class="w-100 p-3 position-absolute top-50 start-50 translate-middle">
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr class="table-active">
+                <th scope="col" class="fs-4">Type of dwelling</th>
+                <th scope="col" class="fs-4">Predicted price</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in object_list %}
+            <tr>
+                <td scope="row" class="fst-italic fs-5">
+                    <a class="text-decoration-none" href="{% url 'details' data.pk %}" >
+                        {% if data.BldgType == 0 %}
+                            {{ forloop.counter }}. Single-family Detached
+                        {% elif data.BldgType == 1 %}
+                            {{ forloop.counter }}. Two-family Conversion; originally built as one-family dwelling
+                        {% elif data.BldgType == 2 %}
+                            {{ forloop.counter }}. Duplex
+                        {% elif data.BldgType == 3 %}
+                            {{ forloop.counter }}. Townhouse Inside Unit
+                        {% elif data.BldgType == 4 %}
+                            {{ forloop.counter }}. Townhouse End Unit
+                        {% endif %}
+                    </a>
+                </td>
+                <td class="fw-italic fs-5">{{ data.SalePrice }}$</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
 {% endblock %}

@@ -4,19 +4,55 @@
 
 {% block content  %}
 
-    <table class="table table-dark table-hover">
-        <thead>
-        <tr class="table-active">
-            <th scope="col">Predicted Price</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">1</th>
-            {% for data in details.pk %}
-                <td>{{ data.SalePrice }}</td>
-            {% endfor %}
-        </tbody>
-    </table>
-
+    <div class="w-100 p-3 position-absolute top-50 start-50 translate-middle">
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr class="table-active fw-italic fs-2 text-center">
+                    <th scope="col" class="p-4 border" colspan="4">Predicted Price: {{ object.SalePrice }}$</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td scope="row" colspan="2" class="fw-bold fw-bold fs-4 p-3 border text-center">Type of dwelling: {{object.BldgType}}</td>
+                    <td scope="row" colspan="2" class="fw-bold fw-bold fs-4 p-3 border text-center">Lot size in square feet: {{object.LotArea}}</td>
+                </tr>
+                <tr>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">General shape of property: {{object.LotShape}}</td>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Style of dwelling: {{object.HouseStyle}}</td>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Neighborhood: {{object.Neighborhood}}</td>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Type of road access: {{object.Street}}</td>
+                </tr>
+                <tr>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">First Floor square feet: {{object.FirstFlrSF}}</td>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Second floor square feet: {{object.SecondFlrSF}}</td>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Number of bedrooms above basement level: {{object.BedroomAbvGr}}</td>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Number of kitchens: {{object.KitchenAbvGr}}</td>
+                </tr>
+                <tr>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Total rooms above grade (does not include bathrooms): {{object.TotRmsAbvGrd}}</td>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Full bathrooms above grade: {{object.FullBath}}</td>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Basement quality: {{object.BsmtQual}}</td>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Total square feet of basement area: {{object.TotalBsmtSF}}</td>
+                </tr>
+                <tr>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Basement full bathrooms: {{object.BsmtFullBath}}</td>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Garage type: {{object.GarageType}}</td>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Size of garage in square feet: {{object.GarageArea}}</td>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Type of roof: {{object.RoofStyle}}</td>
+                </tr>
+                <tr>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Roof material: {{object.RoofMatl}}</td>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Type of foundation: {{object.Foundation}}</td>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Paved driveway: {{object.PavedDrive}}</td>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Open porch area in square feet: {{object.OpenPorchSF}}</td>
+                </tr>
+                <tr>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Pool area in square feet: {{object.PoolArea}}</td>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Heating quality and condition: {{object.HeatingQC}}</td>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Central air conditioning: {{object.CentralAir}}</td>
+                    <td scope="row" class="fw-bold fs-5 p-3 border">Electrical system: {{object.Electrical}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 {% endblock %}
