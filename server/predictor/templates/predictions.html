@@ -16,17 +16,7 @@
             <tr>
                 <td scope="row" class="fst-italic fs-5">
                     <a class="text-decoration-none" href="{% url 'details' data.pk %}" >
-                        {% if data.BldgType == 0 %}
-                            {{ forloop.counter }}. Single-family Detached
-                        {% elif data.BldgType == 1 %}
-                            {{ forloop.counter }}. Two-family Conversion; originally built as one-family dwelling
-                        {% elif data.BldgType == 2 %}
-                            {{ forloop.counter }}. Duplex
-                        {% elif data.BldgType == 3 %}
-                            {{ forloop.counter }}. Townhouse Inside Unit
-                        {% elif data.BldgType == 4 %}
-                            {{ forloop.counter }}. Townhouse End Unit
-                        {% endif %}
+                        {{ forloop.counter }}. {{ data.get_BldgType_display }}
                     </a>
                 </td>
                 <td class="fw-italic fs-5">{{ data.SalePrice }}$</td>

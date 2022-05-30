@@ -1,5 +1,3 @@
-from multiprocessing import context
-from django.shortcuts import render
 from .forms import DataForm
 from .models import Data
 from django.views.generic import CreateView, ListView, DetailView
