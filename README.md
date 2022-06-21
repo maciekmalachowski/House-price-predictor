@@ -7,7 +7,6 @@
  - [Installation](https://github.com/maciekmalachowski/House-price-predictor#installation)
  - [Fields](https://github.com/maciekmalachowski/House-price-predictor#fields)
  - [App appearance](https://github.com/maciekmalachowski/House-price-predictor#app-appearance)
- - [MLJAR](https://github.com/mljar/mljar-supervised#mljar)
  
 # First look 👀
 Predictor is a web application built on `django`. It uses models written in `jupyter-notebook`, which are responsible for all predictions. 
