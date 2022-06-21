@@ -9,7 +9,9 @@
  - [App appearance](https://github.com/maciekmalachowski/House-price-predictor#app-appearance)
 
 # First look 👀
-Predictor is a web application built on `django`. It uses models written in `jupyter-notebook`, which are responsible for all predictions. To select the parameters of the house, the application uses `django-forms`, which automatically enters the data into the database and returns the result of the prediction in the form of price and details that we selected for our dream house in **Ames city**. 
+Predictor is a web application built on `django`. It uses models written in `jupyter-notebook`, which are responsible for all predictions. 
+
+To select the parameters of the house, the application uses `django-forms`, which automatically enters the data into the database and returns the result of the prediction in the form of price and details that we selected for our dream house in **Ames city**. 
 
 # Installation ℹ
 First, we need to install the requirements contained in the ``requirements.txt``. Open your shell and paste the following comands.
