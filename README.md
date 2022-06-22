@@ -1,4 +1,4 @@
-# 💲🏡 House-price-predictor 
+<h1 align="center">💲🏡 House-price-predictor</h1>
 
 
 ## Table of Contents
@@ -8,34 +8,43 @@
  - [Fields](https://github.com/maciekmalachowski/House-price-predictor#fields)
  - [App appearance](https://github.com/maciekmalachowski/House-price-predictor#app-appearance)
  
-# First look 👀
-Predictor is a web application built on `django`. It uses models written in `jupyter-notebook`, which are responsible for all predictions. 
+ <br>
+ 
+<h1 align="center"> First look 👀 </h1>
 
-To select the parameters of the house, the application uses `django-forms`, which automatically enters the data into the database and returns the result of the prediction in the form of price and details that we selected for our dream house in **Ames city**. 
+#### Predictor is a web application built on `django`. It uses models written in `jupyter-notebook`, which are responsible for all predictions. 
 
-# Installation ℹ
-First, we need to install the requirements contained in the ``requirements.txt``. Open your shell and paste the following comands.
+#### To select the parameters of the house, the application uses `django-forms`, which automatically enters the data into the database and returns the result of the prediction in the form of price and details that we selected for our dream house in **Ames city**. 
+
+<br>
+
+<h1 align="center"> Installation ℹ </h1>
+ 
+First, you need to install the requirements contained in the ``requirements.txt``. Open your shell and paste the following comands.
 ```
 pip install -r requirements.txt
 ```
-Then we have to go to ``server`` folder 
+Then you have to go to ``server`` folder 
 ```
 cd House-price-predictor/server
 ```
-and run server with this command
+Next run server with this command
 ```
 manage.py runserver
 ```
-After that we will see a link leading to our application and it looks like this:
+After that you will see a link leading to our application and it looks like this:
 ```
 http://127.0.0.1:8000/
 ```
-Copy and paste it into browser window to *open application*.
+Copy and paste it into browser window to *open the application*.
 
-# Fields ☑
-To create your dream house we have many options to choose from, such as:
+<br>
+
+ <h1 align="center"> Fields ☑</h1>
+ 
+To create your dream house you have many options to choose from, such as:
+ 
 - **Lot size in square feet**
-
 - **General shape of property**
 - **Type of dwelling**
 - **Style of dwelling**
@@ -62,6 +71,32 @@ To create your dream house we have many options to choose from, such as:
 - **Central air conditioning**
 - **Electrical system**
 
-# App appearance 🔍
+ <h1 align="center"> App appearance 🔍</h1>
+ 
+The application is divided into three parts: 
+- **Main** part, where you choose from among the given fields which house we are interested in.
+- **Predictions** part, where all our created houses are displayed together with their estimated price.
+- **Details** part, where you can see our selections when creating the house.
+
+<br>
+
+## Main
+
+After clicking `Make prediction` button you will be taken to the next page, where previous predictions are displayed
+and your last prediction will be displayed at the bottom
+
+![](media/main.gif)
+
+<br>
+
+## Predictions and details
+
+To go to the details of the prediction click on it, it will take you to the next page, where you will find the details
+
+![](media/predictions.gif)
+
+
+#### More images and gifs can be found in the `media` folder.
+
 
 
