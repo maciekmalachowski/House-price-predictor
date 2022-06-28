@@ -84,6 +84,7 @@ The application is divided into three parts:
 
 After clicking `Make prediction` button you will be taken to the next page, where previous predictions are displayed
 and your last prediction will be displayed at the bottom
+###### If you do not see the gif below, please wait a moment
 
 ![](media/main.gif)
 
