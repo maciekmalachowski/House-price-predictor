@@ -1,3 +1,5 @@
+[![Run tests](https://github.com/maciekmalachowski/House-price-predictor/actions/workflows/tests.yml/badge.svg)](https://github.com/maciekmalachowski/House-price-predictor/actions/workflows/tests.yml)
+
 <h1 align="center">💲🏡 House-price-predictor</h1>
 
 
