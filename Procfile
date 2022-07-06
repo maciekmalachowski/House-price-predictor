@@ -1,1 +1,1 @@
-web: gunicorn server.wsgi:application --log-file - --log-level debug
+web: python manage.py runserver
