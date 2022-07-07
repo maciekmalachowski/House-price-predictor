@@ -2,7 +2,7 @@
 
 <h1 align="center">💲🏡 House-price-predictor</h1>
 
-<h2 align="center">See for yourself <br> ▶https://hppredictor.herokuapp.com◀</h2>
+<h2 align="center">See for yourself <br> ▶ https://hppredictor.herokuapp.com ◀</h2>
 
 ## Table of Contents
 
