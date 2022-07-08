@@ -1,6 +1,9 @@
 <nav class="navbar navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="{% url 'index' %}"><button class="btn btn-outline-light btn-lg" type="button">House Price Prediction Website</button></a>
-        <a class="navbar-brand ml-auto" href="{% url 'predictions' %}"><button class="btn btn-outline-light btn-lg" type="button">All Predictions</button></a>
+        <div class="d-grid gap-2 col-6 mx-auto">
+            <a class="navbar-brand" href="{% url 'index' %}"><button class="btn btn-outline-light btn-lg" type="button"><h4>&nbsp Home &nbsp</h4></button></a>
+        </div>
+        <a class="navbar-brand float-end" href="{% url 'predictions' %}"><button class="btn btn-outline-light btn-lg" type="button">All Predictions</button></a>
+        <a class="navbar-brand ml-auto float-end" href="{% url 'logout' %}"><button class="btn btn-outline-light btn-md" type="button">Logout</button></a>
     </div>
 </nav>
