@@ -6,7 +6,7 @@ urlpatterns = [
     path('predictions', PredictionsView.as_view(), name='predictions'),
     path('details/<int:pk>', DetailsView.as_view(), name='details'),
 
-    path('accounts/login/', loginPage, name='login'),
-    path('accounts/register/', registerPage, name='register'),
-    path('logout/', userLogout, name='logout'),
+    path('accounts/login/', Account.loginPage, name='login'),
+    path('accounts/register/', Account.registerPage, name='register'),
+    path('logout/', Account.userLogout, name='logout'),
 ]

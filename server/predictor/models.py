@@ -1,7 +1,7 @@
 from django.urls import reverse
 from django.db import models
 from django.core.validators import MinValueValidator
-from sklearn.ensemble import RandomForestRegressor
+from django.contrib.auth.models import User
 import joblib
 
 
@@ -179,3 +179,9 @@ class Data(models.Model):
     
     def get_absolute_url(self):
         return reverse('predictions')
+
+class PredictionAuthor(models.Model):
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.author

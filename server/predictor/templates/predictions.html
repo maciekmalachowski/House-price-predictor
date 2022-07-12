@@ -16,10 +16,12 @@
             <tr>
                 <td scope="row" class="fst-italic fs-5">
                     <a class="text-decoration-none" href="{% url 'details' data.pk %}" >
-                        {{ forloop.counter }}. {{ data.get_BldgType_display }}
+                            {{ forloop.counter }}. {{ data.get_BldgType_display }}
                     </a>
                 </td>
-                <td class="fw-italic fs-5">{{ data.SalePrice }}$</td>
+                <td class="fw-italic fs-5">
+                        {{ data.SalePrice }}$ {{ data.author.id }}
+                </td>
             </tr>
             {% endfor %}
         </tbody>
