@@ -9,15 +9,18 @@
  - [First look](https://github.com/maciekmalachowski/House-price-predictor#first-look)
  - [Installation](https://github.com/maciekmalachowski/House-price-predictor#installation)
  - [Fields](https://github.com/maciekmalachowski/House-price-predictor#fields)
+ - [User authentication](https://github.com/maciekmalachowski/House-price-predictor#user-authentication)
  - [App appearance](https://github.com/maciekmalachowski/House-price-predictor#app-appearance)
  
  <br>
  
 <h1 align="center"> First look 👀 </h1>
 
-#### Predictor is a web application built on `django`. It uses models written in `jupyter-notebook`, which are responsible for all predictions. 
+#### Predictor is a web application built on `django` along with machine learning features. The application models are written in `jupyter-notebook`, which use `RandomForestRegressor` to properly create all predictions. 
 
 #### To select the parameters of the house, the application uses `django-forms`, which automatically enters the data into the database and returns the result of the prediction in the form of price and details that we selected for our dream house in **Ames city**. 
+
+#### It also has `user authentication` and all to improve your predictions.
 
 <br>
 
@@ -73,6 +76,19 @@ To create your dream house you have many options to choose from, such as:
 - **Heating quality and condition**
 - **Central air conditioning**
 - **Electrical system**
+
+<h1 align="center"> User authentication 🔑</h1>
+
+User authentication was created to reduce the risk of database hacking. <br>
+It is a very simple `login` along with `account registration`. <br>
+Below you can see how both sides look.
+
+## Login
+![](media/login.png)
+
+## Registation
+![](media/registration.png)
+
 
  <h1 align="center"> App appearance 🔍</h1>
  
