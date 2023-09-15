@@ -14,7 +14,7 @@
  
  <br>
  
-<h1 align="center"> First look 👀 </h1>
+<h1 align="center" id="first-look"> First look 👀 </h1>
 
 #### Predictor is a web application built on `django` along with machine learning features. The application models are written in `jupyter-notebook`, which use `RandomForestRegressor` to properly create all predictions. 
 
@@ -24,7 +24,7 @@
 
 <br>
 
-<h1 align="center"> Installation ℹ </h1>
+<h1 align="center" id="installation"> Installation ℹ </h1>
  
 First, you need to install the requirements contained in the ``requirements.txt``. Open your shell and paste the following comands.
 ```
@@ -46,7 +46,7 @@ Copy and paste it into browser window to *open the application*.
 
 <br>
 
- <h1 align="center"> Fields ☑</h1>
+ <h1 align="center" id="fields"> Fields ☑</h1>
  
 To create your dream house you have many options to choose from, such as:
  
@@ -77,7 +77,7 @@ To create your dream house you have many options to choose from, such as:
 - **Central air conditioning**
 - **Electrical system**
 
-<h1 align="center"> User authentication 🔑</h1>
+<h1 align="center" id="user-authentication"> User authentication 🔑</h1>
 
 User authentication was created to reduce the risk of database hacking. <br>
 It is a very simple `login` along with `account registration`. <br>
@@ -90,7 +90,7 @@ Below you can see how both sides look.
 ![](media/registration.png)
 
 
- <h1 align="center"> App appearance 🔍</h1>
+ <h1 align="center" id="app-appearance"> App appearance 🔍</h1>
  
 The application is divided into three parts: 
 - **Main** part, where you choose from among the given fields which house we are interested in.
