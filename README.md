@@ -16,9 +16,9 @@
  
 <h1 align="center" id="first-look"> First look 👀 </h1>
 
-#### Predictor is a web application built on `django` along with machine learning features. The application models are written in `jupyter-notebook`, which use `RandomForestRegressor` to properly create all predictions. 
+#### Predictor is a web application built on `django` along with machine learning features. The application models are written in `jupyter-notebook`, which uses `RandomForestRegressor` to properly create all predictions. 
 
-#### To select the parameters of the house, the application uses `django-forms`, which automatically enters the data into the database and returns the result of the prediction in the form of price and details that we selected for our dream house in **Ames city**. 
+#### To select the parameters of the house, the application uses `django-forms`, which automatically enters the data into the database and returns the result of the prediction in the form of price and details that we selected for our dream house in **Ames City**. 
 
 #### It also has `user authentication` and all to improve your predictions.
 
@@ -26,29 +26,29 @@
 
 <h1 align="center" id="installation"> Installation ℹ </h1>
  
-First, you need to install the requirements contained in the ``requirements.txt``. Open your shell and paste the following comands.
+First, you need to install the requirements contained in ``requirements.txt``. Open your shell and paste the following commands:
 ```
 pip install -r requirements.txt
 ```
-Then you have to go to ``server`` folder 
+Then you have to go to the ``server`` folder 
 ```
 cd House-price-predictor/server
 ```
-Next run server with this command
+Next, run the server with this command
 ```
 manage.py runserver
 ```
-After that you will see a link leading to our application and it looks like this:
+After that, you will see a link leading to our application, and it looks like this:
 ```
 http://127.0.0.1:8000/
 ```
-Copy and paste it into browser window to *open the application*.
+Copy and paste it into the browser window to *open the application*.
 
 <br>
 
  <h1 align="center" id="fields"> Fields ☑</h1>
  
-To create your dream house you have many options to choose from, such as:
+To create your dream house, you have many options to choose from, such as:
  
 - **Lot size in square feet**
 - **General shape of property**
@@ -81,7 +81,7 @@ To create your dream house you have many options to choose from, such as:
 
 User authentication was created to reduce the risk of database hacking. <br>
 It is a very simple `login` along with `account registration`. <br>
-Below you can see how both sides look.
+Below, you can see how both sides look.
 
 ## Login
 ![](media/login.png)
@@ -101,8 +101,8 @@ The application is divided into three parts:
 
 ## Main
 
-After clicking `Make prediction` button you will be taken to the next page, where previous predictions are displayed
-and your last prediction will be displayed at the bottom
+After clicking the `Make prediction` button, you will be taken to the next page, where previous predictions are displayed.
+and your last prediction will be displayed at the bottom.
 
 ![](media/main.png)
 
@@ -114,7 +114,7 @@ and your last prediction will be displayed at the bottom
 
 ## Predictions and details
 
-To go to the details of the prediction click on it, it will take you to the next page, where you will find the details
+To go to the details of the prediction, click on it. It will take you to the next page, where you will find the details.
 
 ![](media/predictions.gif)
 
